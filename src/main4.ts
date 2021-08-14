@@ -3,24 +3,26 @@ import {bind} from "lodash"
 export const name = "maret"
 const name2 = "nazmul"
 
-// Fn w/ another nested fn.
+// Fn w/ nested arrow fn.
 function foo() {
   console.log(this)         // `this` is undefined.
-  function nestedInFoo() {
+  const nestedInFoo = () => {
     console.log(this)
   }
   nestedInFoo()             // In nestedInFoo() -> `this` is undefined.
-  bind(nestedInFoo, foo)()  // In nestedInFoo() -> `this` is foo().
+  bind(nestedInFoo, foo)()  // In nestedInFoo() -> `this` is undefined.
 }
+
 foo()
 
-// Fn w/ another nested fn.
+// Fn w/ nested arrow fn.
 function foo2() {
   console.log(this)         // `this` is "randomstring".
-  function nestedInFoo() {
+  const nestedInFoo = () => {
     console.log(this)
   }
-  nestedInFoo()             // In nestedInFoo() -> `this` is undefined.
-  bind(nestedInFoo, foo2)() // In nestedInFoo() -> `this` is foo2().
+  nestedInFoo()             // In nestedInFoo() -> `this` is "randomstring".
+  bind(nestedInFoo, foo2)() // In nestedInFoo() -> `this` is "randomstring".
 }
+
 bind(foo2, "randomstring")()

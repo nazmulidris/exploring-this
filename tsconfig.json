@@ -2,7 +2,7 @@
   "exclude": ["node_modules"],
   "include": ["./src/**/*"],
   "compilerOptions": {
-    "strict": true,
+    "strict": false,
     "module": "CommonJS",
     "target": "ES6",
     "sourceMap": true,

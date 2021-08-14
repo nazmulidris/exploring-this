@@ -1,45 +1,26 @@
-# ts-node-dev-template
-
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
 
-- [What is this?](#what-is-this)
-  - [npm scripts](#npm-scripts)
-  - [IDEA Run Configurations](#idea-run-configurations)
-- [How to update the template](#how-to-update-the-template)
+- [Introduction](#introduction)
+- [How to get the latest updates to the template project](#how-to-get-the-latest-updates-to-the-template-project)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-## What is this?
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
-This is a template project that makes it easy to work w/ Node.js w/ TypeScript and Jest projects.
-Make sure to run `npm install` before running the scripts or the IDEA Run Configurations shown
-below.
+- [Introduction](#introduction)
+- [How to get the latest updates to the template project](#how-to-get-the-latest-updates-to-the-template-project)
 
-### npm scripts
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-You can run the following npm scripts:
+## Introduction
 
-1. `npm run start` - This runs `main.ts`
-2. `npm run test` - This runs all the Jest tests.
-3. `npm run build` - This runs `tsc` and dumps the compiled output to the `build` folder.
-   > When you run tests after running this command, you will see the test run twice. In this case
-   > just delete the `build` folder.
+JavaScript and TypeScript both have the same handling of the `this` keyword. These 6 examples
+(`main1.ts` to `main5.ts`, `redux.ts` and `redux.test.ts`) which should be run in a debugger examine
+all the various combinations of what happens when you try and predict what `this` contains!
 
-### IDEA Run Configurations
-
-You can also use IDEA Run Configurations that are included.
-
-1. `Run all tests` - This uses `$PROJECT_DIR$/node_modules/.bin/ts-node-dev` to run all Jest test w/
-   the `jestconfig.json` file (just like the npm script).
-2. `main.ts` - This uses `$PROJECT_DIR$/node_modules/.bin/ts-node-dev` to run the file.
-3. There are 3 npm scripts which just run the scripts above.
-
-## How to update the template
-
-You can get more info on this topic [here](https://stackoverflow.com/a/56577320/2085356). Here are
-the steps to create a remote called `template` that we will pull the changes from and then merge
-those changes into `main`.
+## How to get the latest updates to the template project
 
 ```shell
 git remote add template https://github.com/nazmulidris/ts-node-dev-template
